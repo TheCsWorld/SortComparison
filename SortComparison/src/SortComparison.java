@@ -48,9 +48,40 @@ import java.util.Arrays;
      */
     static double [] quickSort (double a[]){
 	
-		 //todo: implement the sort
+    	QSort(a, 0, a.length-1);
+    	return a;
 
     }//end quicksort
+    
+    private static int partition(double a[], int l, int h) {
+    	int i = l;
+    	int j = h+1;
+    	double pivot = a[l];
+    	while(true) {
+    	while(a[++i]< pivot) {
+    	if(i == h) break;
+    	}
+    	while(pivot < a[--j]) {
+    	if(j == l) break;
+    	}
+    	if(i >= j) break;
+    	double temp = a[i];
+    	a[i] = a[j];
+    	a[j] = temp;
+    	}
+    	a[l] = a[j];
+    	a[j] = pivot;
+    	return j;
+    	}
+    
+    private static void QSort(double a[], int l, int h) {
+    	if(h <= l) {
+    	return;
+    	}
+    	int pivot = partition(a, l, h);
+    	QSort(a, l, pivot-1);
+    	QSort(a, pivot+1, h);
+    	}
 
     /**
      * Sorts an array of doubles using Merge Sort.
@@ -68,9 +99,69 @@ import java.util.Arrays;
      */
 
     static double[] mergeSortIterative (double a[]) {
-
     	
-		 //todo: implement the sort
+//    	 if(a == null) 
+//         { 
+//             return a; 
+//         }
+    	 
+   
+         if(a.length > 1) 
+         { 
+             int mid = a.length / 2; 
+   
+             // Split left part 
+             double[] left = new double[mid]; 
+             for(int i = 0; i < mid; i++) 
+             { 
+                 left[i] = a[i]; 
+             } 
+               
+             // Split right part 
+             double[] right = new double[a.length - mid]; 
+             for(int i = mid; i < a.length; i++) 
+             { 
+                 right[i - mid] = a[i]; 
+             } 
+             mergeSortIterative(left); 
+             mergeSortIterative(right); 
+   
+             int i = 0; 
+             int j = 0; 
+             int k = 0; 
+   
+             // Merge left and right arrays 
+             while(i < left.length && j < right.length) 
+             { 
+                 if(left[i] < right[j]) 
+                 { 
+                     a[k] = left[i]; 
+                     i++; 
+                 } 
+                 else
+                 { 
+                     a[k] = right[j]; 
+                     j++; 
+                 } 
+                 k++; 
+             } 
+             // Collect remaining elements 
+             while(i < left.length) 
+             { 
+                 a[k] = left[i]; 
+                 i++; 
+                 k++; 
+             } 
+             while(j < right.length) 
+             { 
+                 a[k] = right[j]; 
+                 j++; 
+                 k++; 
+             } 
+         } 
+
+    	return a;
+		 
 	
     }//end mergesortIterative
     
@@ -163,14 +254,7 @@ import java.util.Arrays;
 
         //todo: do experiments as per assignment instructions
     	
-    	double[] expectedResult = {1.0, 4.0, 7.0, 9.0};
-    	double[] a = {9.0, 4.0, 1.0, 7.0};
-    	System.out.println(Arrays.toString(a));
-    	System.out.println(Arrays.toString(SortComparison.mergeSortRecursive(a)));
-    	System.out.println(Arrays.equals(expectedResult, SortComparison.mergeSortRecursive(a)));
-    	
-    	
-    
+
     	
 //    	File file = new File("SortComparison\\src\\numbers10.txt"); 
 //    	  

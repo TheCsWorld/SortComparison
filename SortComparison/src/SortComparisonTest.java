@@ -36,7 +36,8 @@ public class SortComparisonTest
     {
     	double[] expectedResult = {};
     	double [] a = {};
-    	assertTrue(Arrays.equals(expectedResult, SortComparison.insertionSort(a)));
+    	//assertTrue(Arrays.equals(expectedResult, SortComparison.insertionSort(a)));
+    	assertTrue(Arrays.equals(expectedResult, SortComparison.mergeSortIterative(a)));
     }
     
     @Test
@@ -66,6 +67,27 @@ public class SortComparisonTest
     	System.out.println(Arrays.toString(a));
     	System.out.println(Arrays.toString(SortComparison.mergeSortRecursive(a)));
     	assertTrue(Arrays.equals(expectedResult, SortComparison.mergeSortRecursive(a)));
+    }
+    
+    @Test
+    public void testMergeSortIterative()
+    {
+    	double[] expectedResult = {1.0, 4.0, 7.0, 9.0, 12.0, 15.0};
+    	double[] a = {9.0, 4.0, 15.0, 1.0, 7.0, 12.0};
+    	System.out.println(Arrays.toString(a));
+    	System.out.println(Arrays.toString(SortComparison.mergeSortIterative(a)));
+    	assertTrue(Arrays.equals(expectedResult, SortComparison.mergeSortIterative(a)));
+    }
+    
+    
+    @Test
+    public void testQuickSort()
+    {
+    	double[] expectedResult = {1.0, 4.0, 7.0, 9.0, 12.0, 15.0};
+    	double[] a = {9.0, 4.0, 15.0, 1.0, 7.0, 12.0};
+    	System.out.println(Arrays.toString(a));
+    	System.out.println(Arrays.toString(SortComparison.quickSort(a)));
+    	assertTrue(Arrays.equals(expectedResult, SortComparison.quickSort(a)));
     }
 
 
