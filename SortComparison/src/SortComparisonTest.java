@@ -54,6 +54,7 @@ public class SortComparisonTest
     	double[] expectedResult = {1.0, 4.0, 7.0, 9.0};
     	double[] a = {9.0, 4.0, 1.0, 7.0};
     	System.out.println(Arrays.toString(a));
+    	System.out.println(Arrays.toString(SortComparison.selectionSort(a)));
     	assertTrue(Arrays.equals(expectedResult, SortComparison.selectionSort(a)));
     }
 

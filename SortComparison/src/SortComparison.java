@@ -1,5 +1,8 @@
+import static org.junit.Assert.assertTrue;
+
 import java.io.*; 
 // -------------------------------------------------------------------------
+import java.util.Arrays;
 
 /**
  *  This class contains static methods that implementing sorting of an array of numbers
@@ -66,6 +69,7 @@ import java.io.*;
 
     static double[] mergeSortIterative (double a[]) {
 
+    	
 		 //todo: implement the sort
 	
     }//end mergesortIterative
@@ -121,6 +125,12 @@ import java.io.*;
     	//double[] a = {6.0, 2.0, 8.0, 5.0};
     	//System.out.println(insertionSort(a));
         //todo: do experiments as per assignment instructions
+    	
+    	double[] expectedResult = {1.0, 4.0, 7.0, 9.0};
+    	double[] a = {9.0, 4.0, 1.0, 7.0};
+    	//System.out.println(Arrays.toString(a));
+    	//System.out.println(Arrays.toString(SortComparison.selectionSort(a)));
+    	//System.out.println(Arrays.equals(expectedResult, SortComparison.selectionSort(a)));
     	
     	
     	
