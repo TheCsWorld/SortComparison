@@ -1,3 +1,4 @@
+import java.io.*; 
 // -------------------------------------------------------------------------
 
 /**
@@ -115,11 +116,30 @@
    
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
     	//double[] a = {6.0, 2.0, 8.0, 5.0};
     	//System.out.println(insertionSort(a));
         //todo: do experiments as per assignment instructions
+    	
+    	
+    	
+//    	File file = new File("SortComparison\\src\\numbers10.txt"); 
+//    	  
+//    	  BufferedReader br;
+//		try {
+//			br = new BufferedReader(new FileReader(file));
+//			String st;
+//			while ((st = br.readLine()) != null) {
+//			    System.out.println(st); 
+//		}
+//		}catch (FileNotFoundException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		} 
+    	  
+    	   
+    	  
     }
 
  }//end class

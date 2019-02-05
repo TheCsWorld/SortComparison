@@ -1,4 +1,8 @@
+import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+
+import java.util.Arrays;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -27,12 +31,12 @@ public class SortComparisonTest
     /**
      * Check that the methods work for empty arrays
      */
-   // @Test
+    @Test
     public void testEmpty()
     {
-    	int expectedResult = 0;
+    	double[] expectedResult = {};
     	double [] a = {};
-    	assertEquals("insertionSort failed with empty array", expectedResult, SortComparison.insertionSort(new double[0]));
+    	assertTrue(Arrays.equals(expectedResult, SortComparison.insertionSort(a)));
     }
     
     @Test
@@ -40,7 +44,17 @@ public class SortComparisonTest
     {
     	double[] expectedResult = {2.0, 5.0, 6.0, 8.0};
     	double[] a = {6.0, 2.0, 8.0, 5.0};
-    	assertEquals("insertionSort sorted", expectedResult, SortComparison.insertionSort(a));
+    	//System.out.println(Arrays.toString(a));
+    	assertTrue(Arrays.equals(expectedResult, SortComparison.insertionSort(a)));
+    }
+    
+    @Test
+    public void testSelectionSort()
+    {
+    	double[] expectedResult = {1.0, 4.0, 7.0, 9.0};
+    	double[] a = {9.0, 4.0, 1.0, 7.0};
+    	System.out.println(Arrays.toString(a));
+    	assertTrue(Arrays.equals(expectedResult, SortComparison.selectionSort(a)));
     }
 
 
