@@ -57,6 +57,16 @@ public class SortComparisonTest
     	System.out.println(Arrays.toString(SortComparison.selectionSort(a)));
     	assertTrue(Arrays.equals(expectedResult, SortComparison.selectionSort(a)));
     }
+    
+    @Test
+    public void testMergeSortRecursive()
+    {
+    	double[] expectedResult = {1.0, 4.0, 7.0, 9.0, 12.0, 15.0};
+    	double[] a = {9.0, 4.0, 15.0, 1.0, 7.0, 12.0};
+    	System.out.println(Arrays.toString(a));
+    	System.out.println(Arrays.toString(SortComparison.mergeSortRecursive(a)));
+    	assertTrue(Arrays.equals(expectedResult, SortComparison.mergeSortRecursive(a)));
+    }
 
 
     // TODO: add more tests here. Each line of code and ech decision in Collinear.java should
