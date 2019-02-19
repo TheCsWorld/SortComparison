@@ -260,13 +260,28 @@ import java.util.Arrays;
 			int i;
 			String st = "";
 			while ((i=fr.read()) != -1) {
-			    //System.out.println((char) i); 
 			    st = st + (char)i;
 			}
 			st = st.replace("\n", "");
-		    System.out.println(st); 
-		    String [] splitStr = st.split("\n");
-		    System.out.println(st);
+		    //System.out.println(st); 
+		    String[] splitStr = st.split("\n");
+		    System.out.println(Arrays.toString(splitStr));
+		    double[] list;
+		    list = new double[10];
+		    for(int count=0; count< list.length; count++) {
+		    	try {
+		    	list[count] = Double.parseDouble(splitStr[count]);	//not working
+		    	}
+		    	catch (NumberFormatException e){
+		    		
+		    	}
+		    	catch(ArrayIndexOutOfBoundsException e){
+		    		
+		    	}
+		    	System.out.println("num: " + Arrays.toString(list));
+		    }
+		    
+		    
 
 		}catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
