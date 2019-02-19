@@ -250,25 +250,28 @@ import java.util.Arrays;
    
 
 
-    public static void main(String[] args) {
+    @SuppressWarnings("resource")
+	public static void main(String[] args) throws IOException {
 
         //todo: do experiments as per assignment instructions
-    	
+ 
+		try {
+			FileReader fr = new FileReader("C:\\Users\\chloe\\Documents\\numbers10.txt");
+			int i;
+			String st = "";
+			while ((i=fr.read()) != -1) {
+			    //System.out.println((char) i); 
+			    st = st + (char)i;
+			}
+			st = st.replace("\n", "");
+		    System.out.println(st); 
+		    String [] splitStr = st.split("\n");
+		    System.out.println(st);
 
-    	
-//    	File file = new File("SortComparison\\src\\numbers10.txt"); 
-//    	  
-//    	  BufferedReader br;
-//		try {
-//			br = new BufferedReader(new FileReader(file));
-//			String st;
-//			while ((st = br.readLine()) != null) {
-//			    System.out.println(st); 
-//		}
-//		}catch (FileNotFoundException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		} 
+		}catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} 
     	  
     	   
     	  
