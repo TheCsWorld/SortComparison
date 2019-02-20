@@ -383,30 +383,30 @@ import java.util.Arrays;
 			double[] arr100 = readFile(fr);
 			type = "insertion";
 			
-//			//insertion
-//			type = "insertion";		
-//			time = getTime(arr100, type);
-//			System.out.println("numbers100 insertion Time:" + time);
+			//insertion
+			type = "insertion";		
+			time = getTime(arr100, type);
+			System.out.println("numbers100 insertion Time:" + time);
 			
 			//quick
 			type = "quick";
 			time = getTime(arr100, type);			
 			System.out.println("numbers100 quick Time:" + time);
-//			
-//			//mergeIterate
-//			type = "mergeIt";
-//			time = getTime(arr100, type);			
-//			System.out.println("numbers100 mergeIt Time:" + time);
-//			
-//			//mergeRecursive
-//			type = "mergeRec";
-//			time = getTime(arr100, type);			
-//			System.out.println("numbers100 mergeRec Time:" + time);
-//			
-//			//selection
-//			type = "selection";
-//			time = getTime(arr100, type);			
-//			System.out.println("numbers100 selection Time:" + time);
+			
+			//mergeIterate
+			type = "mergeIt";
+			time = getTime(arr100, type);			
+			System.out.println("numbers100 mergeIt Time:" + time);
+			
+			//mergeRecursive
+			type = "mergeRec";
+			time = getTime(arr100, type);			
+			System.out.println("numbers100 mergeRec Time:" + time);
+			
+			//selection
+			type = "selection";
+			time = getTime(arr100, type);			
+			System.out.println("numbers100 selection Time:" + time);
 			
 			
 			
