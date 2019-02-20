@@ -294,26 +294,26 @@ import java.util.Arrays;
 
     		switch(type) {
     		case "insertion": 
-    					startTime = System.nanoTime();
+    					startTime = System.nanoTime();	
     					insertionSort(arr);
     					endTime = System.nanoTime();
     					time = endTime - startTime;
     		
-    					return time;
+    					return time/1000000;
     		case "quick":
     					startTime = System.nanoTime();
     					quickSort(arr);
     					endTime = System.nanoTime();
 				  		time = endTime - startTime;
 
-				  		return time;
+				  		return time/1000000;
     		case "mergeIt":
     				startTime = System.nanoTime();
     				mergeSortIterative(arr);
     				endTime = System.nanoTime();
     				time = endTime - startTime;
 
-    				return time;
+    				return time/1000000;
     				
     		case "mergeRec" :
     			startTime = System.nanoTime();
@@ -321,7 +321,7 @@ import java.util.Arrays;
 				endTime = System.nanoTime();
 				time = endTime - startTime;
 				
-				return time;
+				return time/1000000;
 				
     		case "selection" : 
     			startTime = System.nanoTime();
@@ -329,7 +329,7 @@ import java.util.Arrays;
 				endTime = System.nanoTime();
 				time = endTime - startTime;
 				
-				return time;
+				return time/1000000;
     		}
     		
 
@@ -531,30 +531,30 @@ import java.util.Arrays;
 			fr = new FileReader("C:\\Users\\chloe\\Documents\\numbersSorted1000.txt");
 			double[] arr1000s = readFile(fr);
 
-			//insertion
-			type = "insertion";		
-			time = getTime(arr1000s, type);
-			System.out.println("numbersSorted1000 insertion Time:" + time);
-			
-			//quick
-			type = "quick";
-			time = getTime(arr1000s, type);			
-			System.out.println("numbersSorted1000 quick Time:" + time);
-			
-			//mergeIterate
-			type = "mergeIt";
-			time = getTime(arr1000s, type);			
-			System.out.println("numbersSorted1000 mergeIt Time:" + time);
-			
-			//mergeRecursive
-			type = "mergeRec";
-			time = getTime(arr1000s, type);			
-			System.out.println("numbersSorted1000 mergeRec Time:" + time);
-			
-			//selection
-			type = "selection";
-			time = getTime(arr1000s, type);			
-			System.out.println("numbersSorted1000 selection Time:" + time);
+//			//insertion
+//			type = "insertion";		
+//			time = getTime(arr1000s, type);
+//			System.out.println("numbersSorted1000 insertion Time:" + time);
+//			
+//			//quick
+//			type = "quick";
+//			time = getTime(arr1000s, type);			
+//			System.out.println("numbersSorted1000 quick Time:" + time);
+//			
+//			//mergeIterate
+//			type = "mergeIt";
+//			time = getTime(arr1000s, type);			
+//			System.out.println("numbersSorted1000 mergeIt Time:" + time);
+//			
+//			//mergeRecursive
+//			type = "mergeRec";
+//			time = getTime(arr1000s, type);			
+//			System.out.println("numbersSorted1000 mergeRec Time:" + time);
+//			
+//			//selection
+//			type = "selection";
+//			time = getTime(arr1000s, type);			
+//			System.out.println("numbersSorted1000 selection Time:" + time);
 			
 			
     	  
