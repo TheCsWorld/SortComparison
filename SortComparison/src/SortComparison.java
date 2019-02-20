@@ -528,26 +528,26 @@ import java.util.Arrays;
 			fr = new FileReader("C:\\Users\\chloe\\Documents\\numbersSorted1000.txt");
 			double[] arr1000s = readFile(fr);
 
-//			//insertion
-//			type = "insertion";		
-//			time = getTime(arr1000s, type);
-//			System.out.println("numbersSorted1000 insertion Time:" + time);
-//			
-//			//quick
-//			type = "quick";
-//			time = getTime(arr1000s, type);			
-//			System.out.println("numbersSorted1000 quick Time:" + time);
-//			
-//			//mergeIterate
-//			type = "mergeIt";
-//			time = getTime(arr1000s, type);			
-//			System.out.println("numbersSorted1000 mergeIt Time:" + time);
-//			
-//			//mergeRecursive
-//			type = "mergeRec";
-//			time = getTime(arr1000s, type);			
-//			System.out.println("numbersSorted1000 mergeRec Time:" + time);
-//			
+			//insertion
+			type = "insertion";		
+			time = getTime(arr1000s, type);
+			System.out.println("numbersSorted1000 insertion Time:" + time);
+			
+			//quick
+			type = "quick";
+			time = getTime(arr1000s, type);			
+			System.out.println("numbersSorted1000 quick Time:" + time);
+			
+			//mergeIterate
+			type = "mergeIt";
+			time = getTime(arr1000s, type);			
+			System.out.println("numbersSorted1000 mergeIt Time:" + time);
+			
+			//mergeRecursive
+			type = "mergeRec";
+			time = getTime(arr1000s, type);			
+			System.out.println("numbersSorted1000 mergeRec Time:" + time);
+			
 			//selection
 			type = "selection";
 			time = getTime(arr1000s, type);			
@@ -563,3 +563,18 @@ import java.util.Arrays;
 
 
  }//end class
+ 
+ 
+ 
+ /*
+  * 			    | Insert  |	 Quick 	|Merge Recursive |	Merge Iterative  |	Selection
+10 random		    |0.010944 |	0.02086	|	0.016415	 |		0.016415	 |	 0.00684
+100 random		    |0.453115 | 0.270501|	0.10396	 	 |		0.16996		 | 	 0.302305
+1000 random		 	|17.842799|	8.031927|	1.850759	 |		1.800147	 |   8.748702
+1000 few unique		|9.556443 |	4.057513|	1.484848	 |		1.68114		 |	 10.078637
+1000 nearly ordered	|9.179589 |	7.944724|	1.746458	 |	    1.779287	 |   8.567457
+1000 reverse order	|12.416366|	7.65986 |	1.55974		 |		7.65986		 |	 9.916542
+1000 sorted			|7.160921 |	7.590097|	1.365157	 |		3.892682	 |   9.401872
+
+
+ */
