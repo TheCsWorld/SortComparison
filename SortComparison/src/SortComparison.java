@@ -331,10 +331,7 @@ import java.util.Arrays;
 				
 				return time/1000000;
     		}
-    		
 
-    	
-    	
     	
     	return 0.0;
     }
@@ -551,10 +548,10 @@ import java.util.Arrays;
 //			time = getTime(arr1000s, type);			
 //			System.out.println("numbersSorted1000 mergeRec Time:" + time);
 //			
-//			//selection
-//			type = "selection";
-//			time = getTime(arr1000s, type);			
-//			System.out.println("numbersSorted1000 selection Time:" + time);
+			//selection
+			type = "selection";
+			time = getTime(arr1000s, type);			
+			System.out.println("numbersSorted1000 selection Time:" + time);
 			
 			
     	  
