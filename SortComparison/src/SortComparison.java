@@ -472,36 +472,60 @@ import java.util.Arrays;
 			fr = new FileReader("C:\\Users\\chloe\\Documents\\numbersNearlyOrdered1000.txt");
 			double[] arr1000n = readFile(fr);
 			
-			//insertion
-			type = "insertion";		
-			time = getTime(arr1000n, type);
-			System.out.println("numbersNearlyOrdered1000 insertion Time:" + time);
-			
-			//quick
-			type = "quick";
-			time = getTime(arr1000n, type);			
-			System.out.println("numbersNearlyOrdered1000 quick Time:" + time);
-			
-			//mergeIterate
-			type = "mergeIt";
-			time = getTime(arr1000n, type);			
-			System.out.println("numbersNearlyOrdered1000 mergeIt Time:" + time);
-			
-			//mergeRecursive
-			type = "mergeRec";
-			time = getTime(arr1000n, type);			
-			System.out.println("numbersNearlyOrdered1000 mergeRec Time:" + time);
-			
-			//selection
-			type = "selection";
-			time = getTime(arr1000n, type);			
-			System.out.println("numbersNearlyOrdered1000 selection Time:" + time);
+//			//insertion
+//			type = "insertion";		
+//			time = getTime(arr1000n, type);
+//			System.out.println("numbersNearlyOrdered1000 insertion Time:" + time);
+//			
+//			//quick
+//			type = "quick";
+//			time = getTime(arr1000n, type);			
+//			System.out.println("numbersNearlyOrdered1000 quick Time:" + time);
+//			
+//			//mergeIterate
+//			type = "mergeIt";
+//			time = getTime(arr1000n, type);			
+//			System.out.println("numbersNearlyOrdered1000 mergeIt Time:" + time);
+//			
+//			//mergeRecursive
+//			type = "mergeRec";
+//			time = getTime(arr1000n, type);			
+//			System.out.println("numbersNearlyOrdered1000 mergeRec Time:" + time);
+//			
+//			//selection
+//			type = "selection";
+//			time = getTime(arr1000n, type);			
+//			System.out.println("numbersNearlyOrdered1000 selection Time:" + time);
 			
 			
 			//read in numbersReverse1000.txt
 			fr = new FileReader("C:\\Users\\chloe\\Documents\\numbersReverse1000.txt");
 			double[] arr1000r = readFile(fr);
-			type = "insertion";
+
+			//insertion
+			type = "insertion";		
+			time = getTime(arr1000r, type);
+			System.out.println("numbersReverse1000 insertion Time:" + time);
+			
+//			//quick
+//			type = "quick";
+//			time = getTime(arr1000r, type);			
+//			System.out.println("numbersReverse1000 quick Time:" + time);
+//			
+//			//mergeIterate
+//			type = "mergeIt";
+//			time = getTime(arr1000r, type);			
+//			System.out.println("numbersReverse1000 mergeIt Time:" + time);
+//			
+//			//mergeRecursive
+//			type = "mergeRec";
+//			time = getTime(arr1000r, type);			
+//			System.out.println("numbersReverse1000 mergeRec Time:" + time);
+//			
+//			//selection
+//			type = "selection";
+//			time = getTime(arr1000r, type);			
+//			System.out.println("numbersReverse1000 selection Time:" + time);
 			
 			//read in numbersSorted1000
 			fr = new FileReader("C:\\Users\\chloe\\Documents\\numbersReverse1000.txt");
