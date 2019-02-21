@@ -60,7 +60,7 @@ import org.junit.runners.JUnit4;
 /**
  *  Test class for SortComparison.java
  *
- *  @author
+ *  @author Chloe Conneely 17323080
  *  @version HT 2019
  */
 @RunWith(JUnit4.class)
@@ -84,8 +84,11 @@ public class SortComparisonTest
     {
     	double[] expectedResult = {};
     	double [] a = {};
-    	//assertTrue(Arrays.equals(expectedResult, SortComparison.insertionSort(a)));
+    	assertTrue(Arrays.equals(expectedResult, SortComparison.insertionSort(a)));
     	assertTrue(Arrays.equals(expectedResult, SortComparison.mergeSortIterative(a)));
+    	assertTrue(Arrays.equals(expectedResult, SortComparison.quickSort(a)));
+    	assertTrue(Arrays.equals(expectedResult, SortComparison.selectionSort(a)));
+    	assertTrue(Arrays.equals(expectedResult, SortComparison.mergeSortRecursive(a)));
     }
     
     @Test
@@ -93,8 +96,11 @@ public class SortComparisonTest
     {
     	double[] expectedResult = {2.0, 5.0, 6.0, 8.0};
     	double[] a = {6.0, 2.0, 8.0, 5.0};
-    	//System.out.println(Arrays.toString(a));
     	assertTrue(Arrays.equals(expectedResult, SortComparison.insertionSort(a)));
+    	
+    	double[] sortedResult = {1.0, 3.0, 5.0};
+    	double[] sorted = {1.0, 3.0, 5.0};
+    	assertTrue(Arrays.equals(sortedResult, SortComparison.insertionSort(sorted)));
     }
     
     @Test
@@ -105,6 +111,10 @@ public class SortComparisonTest
     	System.out.println(Arrays.toString(a));
     	System.out.println(Arrays.toString(SortComparison.selectionSort(a)));
     	assertTrue(Arrays.equals(expectedResult, SortComparison.selectionSort(a)));
+    	
+    	double[] sortedResult = {1.0, 3.0, 5.0};
+    	double[] sorted = {1.0, 3.0, 5.0};
+    	assertTrue(Arrays.equals(sortedResult, SortComparison.selectionSort(sorted)));
     }
     
     @Test
@@ -115,6 +125,10 @@ public class SortComparisonTest
     	System.out.println(Arrays.toString(a));
     	System.out.println(Arrays.toString(SortComparison.mergeSortRecursive(a)));
     	assertTrue(Arrays.equals(expectedResult, SortComparison.mergeSortRecursive(a)));
+    	
+    	double[] sortedResult = {1.0, 3.0, 5.0};
+    	double[] sorted = {1.0, 3.0, 5.0};
+    	assertTrue(Arrays.equals(sortedResult, SortComparison.mergeSortRecursive(sorted)));
     }
     
     @Test
@@ -125,6 +139,10 @@ public class SortComparisonTest
     	System.out.println(Arrays.toString(a));
     	System.out.println(Arrays.toString(SortComparison.mergeSortIterative(a)));
     	assertTrue(Arrays.equals(expectedResult, SortComparison.mergeSortIterative(a)));
+    	
+    	double[] sortedResult = {1.0, 3.0, 5.0};
+    	double[] sorted = {1.0, 3.0, 5.0};
+    	assertTrue(Arrays.equals(sortedResult, SortComparison.mergeSortIterative(sorted)));
     }
     
     
@@ -136,21 +154,20 @@ public class SortComparisonTest
     	System.out.println(Arrays.toString(a));
     	System.out.println(Arrays.toString(SortComparison.quickSort(a)));
     	assertTrue(Arrays.equals(expectedResult, SortComparison.quickSort(a)));
+    	
+    	double[] sortedResult = {1.0, 3.0, 5.0};
+    	double[] sorted = {1.0, 3.0, 5.0};
+    	assertTrue(Arrays.equals(sortedResult, SortComparison.quickSort(sorted)));
     }
-
-
-    // TODO: add more tests here. Each line of code and ech decision in Collinear.java should
-    // be executed at least once from at least one test.
-
     // ----------------------------------------------------------
     /**
      *  Main Method.
      *  Use this main method to create the experiments needed to answer the experimental performance questions of this assignment.
      *
      */
-    public static void main(String[] args)
-    {
-        //TODO: implement this method
-    }
+//    public static void main(String[] args)
+//    {
+//        //TODO: implement this method
+//    }
 
 }

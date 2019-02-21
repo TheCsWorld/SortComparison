@@ -100,12 +100,6 @@ import java.util.Arrays;
 
     static double[] mergeSortIterative (double a[]) {
     	
-//    	 if(a == null) 
-//         { 
-//             return a; 
-//         }
-    	 
-   
          if(a.length > 1) 
          { 
              int mid = a.length / 2; 
@@ -248,107 +242,107 @@ import java.util.Arrays;
     }//end selectionsort
 
    
-    public static double[] readFile(FileReader fr) throws IOException {
-    	double[] arr;
-    	
-    	int i;
-		String st = "";
-		try {
-		while ((i=fr.read()) != -1) {
-		    st = st + (char)i;
-		}
-	    //System.out.println(st); 
-	    String[] splitStr = st.split("\n");
-	    //System.out.println(Arrays.toString(splitStr));
-	    double[] list = new double[splitStr.length];
-	    for(int count=0; count< list.length; count++) {
-	    	try {
-	    	list[count] = Double.parseDouble(splitStr[count]);	//not working
-	    	}
-	    	catch (NumberFormatException e){
-	    		System.out.println("NumberFormatException");
-	    	}
-	    	catch(ArrayIndexOutOfBoundsException e){
-	    		System.out.println("ArrayIndexOutOfBoundsException");
-	    		
-	    	}
-	    	//System.out.println("num: " + Arrays.toString(list));
-	    }
-	    //System.out.println("num: " + Arrays.toString(list));
-	    
-	    return list;
-
-	}catch (FileNotFoundException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	} 
-    	
-    	return null;
-    }
-    
-    private static double getTime(double[] arr, String type)
-    {
-    	double time = 0.0;
-    	double startTime =0.0;
-    	double endTime = 0.0;
-
-    		switch(type) {
-    		case "insertion": 
-    					startTime = System.nanoTime();	
-    					insertionSort(arr);
-    					endTime = System.nanoTime();
-    					time = endTime - startTime;
-    		
-    					return time/1000000;
-    		case "quick":
-    					startTime = System.nanoTime();
-    					quickSort(arr);
-    					endTime = System.nanoTime();
-				  		time = endTime - startTime;
-
-				  		return time/1000000;
-    		case "mergeIt":
-    				startTime = System.nanoTime();
-    				mergeSortIterative(arr);
-    				endTime = System.nanoTime();
-    				time = endTime - startTime;
-
-    				return time/1000000;
-    				
-    		case "mergeRec" :
-    			startTime = System.nanoTime();
-				mergeSortRecursive(arr);
-				endTime = System.nanoTime();
-				time = endTime - startTime;
-				
-				return time/1000000;
-				
-    		case "selection" : 
-    			startTime = System.nanoTime();
-				selectionSort(arr);
-				endTime = System.nanoTime();
-				time = endTime - startTime;
-				
-				return time/1000000;
-    		}
-
-    	
-    	return 0.0;
-    }
-    
-    
-
-    @SuppressWarnings("resource")
-	public static void main(String[] args) throws IOException {
-
-    	double time =0;
-        //todo: do experiments as per assignment instructions
- 
-    		//read in numbers10.txt		
-			FileReader fr = new FileReader("C:\\Users\\chloe\\Documents\\numbers10.txt");
-			double[] arr10 = readFile(fr);
-			String type ;
-			
+//    public static double[] readFile(FileReader fr) throws IOException {
+//    	double[] arr;
+//    	
+//    	int i;
+//		String st = "";
+//		try {
+//		while ((i=fr.read()) != -1) {
+//		    st = st + (char)i;
+//		}
+//	    //System.out.println(st); 
+//	    String[] splitStr = st.split("\n");
+//	    //System.out.println(Arrays.toString(splitStr));
+//	    double[] list = new double[splitStr.length];
+//	    for(int count=0; count< list.length; count++) {
+//	    	try {
+//	    	list[count] = Double.parseDouble(splitStr[count]);	//not working
+//	    	}
+//	    	catch (NumberFormatException e){
+//	    		System.out.println("NumberFormatException");
+//	    	}
+//	    	catch(ArrayIndexOutOfBoundsException e){
+//	    		System.out.println("ArrayIndexOutOfBoundsException");
+//	    		
+//	    	}
+//	    	//System.out.println("num: " + Arrays.toString(list));
+//	    }
+//	    //System.out.println("num: " + Arrays.toString(list));
+//	    
+//	    return list;
+//
+//	}catch (FileNotFoundException e) {
+//		// TODO Auto-generated catch block
+//		e.printStackTrace();
+//	} 
+//    	
+//    	return null;
+//    }
+//    
+//    private static double getTime(double[] arr, String type)
+//    {
+//    	double time = 0.0;
+//    	double startTime =0.0;
+//    	double endTime = 0.0;
+//
+//    		switch(type) {
+//    		case "insertion": 
+//    					startTime = System.nanoTime();	
+//    					insertionSort(arr);
+//    					endTime = System.nanoTime();
+//    					time = endTime - startTime;
+//    		
+//    					return time/1000000;
+//    		case "quick":
+//    					startTime = System.nanoTime();
+//    					quickSort(arr);
+//    					endTime = System.nanoTime();
+//				  		time = endTime - startTime;
+//
+//				  		return time/1000000;
+//    		case "mergeIt":
+//    				startTime = System.nanoTime();
+//    				mergeSortIterative(arr);
+//    				endTime = System.nanoTime();
+//    				time = endTime - startTime;
+//
+//    				return time/1000000;
+//    				
+//    		case "mergeRec" :
+//    			startTime = System.nanoTime();
+//				mergeSortRecursive(arr);
+//				endTime = System.nanoTime();
+//				time = endTime - startTime;
+//				
+//				return time/1000000;
+//				
+//    		case "selection" : 
+//    			startTime = System.nanoTime();
+//				selectionSort(arr);
+//				endTime = System.nanoTime();
+//				time = endTime - startTime;
+//				
+//				return time/1000000;
+//    		}
+//
+//    	
+//    	return 0.0;
+//    }
+//    
+//    
+//
+//    @SuppressWarnings("resource")
+//	public static void main(String[] args) throws IOException {
+//
+//    	double time =0;
+//        //todo: do experiments as per assignment instructions
+// 
+//    		//read in numbers10.txt		
+//			FileReader fr = new FileReader("C:\\Users\\chloe\\Documents\\numbers10.txt");
+//			double[] arr10 = readFile(fr);
+//			String type ;
+//			
 //			//insertion
 //			type = "insertion";		
 //			time = getTime(arr10, type);
@@ -373,12 +367,12 @@ import java.util.Arrays;
 //			type = "selection";
 //			time = getTime(arr10, type);			
 //			System.out.println("numbers10 selection Time:" + time);
-			
-			
-			//read in numbers100.txt
-			fr = new FileReader("C:\\Users\\chloe\\Documents\\numbers100.txt");
-			double[] arr100 = readFile(fr);
-			
+//			
+//			
+//			//read in numbers100.txt
+//			fr = new FileReader("C:\\Users\\chloe\\Documents\\numbers100.txt");
+//			double[] arr100 = readFile(fr);
+//			
 //			//insertion
 //			type = "insertion";		
 //			time = getTime(arr100, type);
@@ -403,13 +397,13 @@ import java.util.Arrays;
 //			type = "selection";
 //			time = getTime(arr100, type);			
 //			System.out.println("numbers100 selection Time:" + time);
-			
-			
-			
-			//read in numbers1000.txt
-			fr = new FileReader("C:\\Users\\chloe\\Documents\\numbers1000.txt");
-			double[] arr1000 = readFile(fr);
-			
+//			
+//			
+//			
+//			//read in numbers1000.txt
+//			fr = new FileReader("C:\\Users\\chloe\\Documents\\numbers1000.txt");
+//			double[] arr1000 = readFile(fr);
+//			
 //			//insertion
 //			type = "insertion";		
 //			time = getTime(arr1000, type);
@@ -434,12 +428,12 @@ import java.util.Arrays;
 //			type = "selection";
 //			time = getTime(arr1000, type);			
 //			System.out.println("numbers1000 selection Time:" + time);
-			
-			//read in numbers1000Duplicates.txt
-			fr = new FileReader("C:\\Users\\chloe\\Documents\\numbers1000Duplicates.txt");
-			double[] arr1000d = readFile(fr);
-			type = "insertion";
-			
+//			
+//			//read in numbers1000Duplicates.txt
+//			fr = new FileReader("C:\\Users\\chloe\\Documents\\numbers1000Duplicates.txt");
+//			double[] arr1000d = readFile(fr);
+//			type = "insertion";
+//			
 //			//insertion
 //			type = "insertion";		
 //			time = getTime(arr1000d, type);
@@ -464,11 +458,11 @@ import java.util.Arrays;
 //			type = "selection";
 //			time = getTime(arr1000d, type);			
 //			System.out.println("numbers1000Duplicates selection Time:" + time);
-			
-			//read in numbersNearlyOrdered1000.txt
-			fr = new FileReader("C:\\Users\\chloe\\Documents\\numbersNearlyOrdered1000.txt");
-			double[] arr1000n = readFile(fr);
-			
+//			
+//			//read in numbersNearlyOrdered1000.txt
+//			fr = new FileReader("C:\\Users\\chloe\\Documents\\numbersNearlyOrdered1000.txt");
+//			double[] arr1000n = readFile(fr);
+//			
 //			//insertion
 //			type = "insertion";		
 //			time = getTime(arr1000n, type);
@@ -493,12 +487,12 @@ import java.util.Arrays;
 //			type = "selection";
 //			time = getTime(arr1000n, type);			
 //			System.out.println("numbersNearlyOrdered1000 selection Time:" + time);
-			
-			
-			//read in numbersReverse1000.txt
-			fr = new FileReader("C:\\Users\\chloe\\Documents\\numbersReverse1000.txt");
-			double[] arr1000r = readFile(fr);
-
+//			
+//			
+//			//read in numbersReverse1000.txt
+//			fr = new FileReader("C:\\Users\\chloe\\Documents\\numbersReverse1000.txt");
+//			double[] arr1000r = readFile(fr);
+//
 //			//insertion
 //			type = "insertion";		
 //			time = getTime(arr1000r, type);
@@ -523,41 +517,41 @@ import java.util.Arrays;
 //			type = "selection";
 //			time = getTime(arr1000r, type);			
 //			System.out.println("numbersReverse1000 selection Time:" + time);
-			
-			//read in numbersSorted1000
-			fr = new FileReader("C:\\Users\\chloe\\Documents\\numbersSorted1000.txt");
-			double[] arr1000s = readFile(fr);
-
-			//insertion
-			type = "insertion";		
-			time = getTime(arr1000s, type);
-			System.out.println("numbersSorted1000 insertion Time:" + time);
-			
-			//quick
-			type = "quick";
-			time = getTime(arr1000s, type);			
-			System.out.println("numbersSorted1000 quick Time:" + time);
-			
-			//mergeIterate
-			type = "mergeIt";
-			time = getTime(arr1000s, type);			
-			System.out.println("numbersSorted1000 mergeIt Time:" + time);
-			
-			//mergeRecursive
-			type = "mergeRec";
-			time = getTime(arr1000s, type);			
-			System.out.println("numbersSorted1000 mergeRec Time:" + time);
-			
-			//selection
-			type = "selection";
-			time = getTime(arr1000s, type);			
-			System.out.println("numbersSorted1000 selection Time:" + time);
-			
-			
-    	  
-    	   
-    	  
-    }
+//			
+//			//read in numbersSorted1000
+//			fr = new FileReader("C:\\Users\\chloe\\Documents\\numbersSorted1000.txt");
+//			double[] arr1000s = readFile(fr);
+//
+//			//insertion
+//			type = "insertion";		
+//			time = getTime(arr1000s, type);
+//			System.out.println("numbersSorted1000 insertion Time:" + time);
+//			
+//			//quick
+//			type = "quick";
+//			time = getTime(arr1000s, type);			
+//			System.out.println("numbersSorted1000 quick Time:" + time);
+//			
+//			//mergeIterate
+//			type = "mergeIt";
+//			time = getTime(arr1000s, type);			
+//			System.out.println("numbersSorted1000 mergeIt Time:" + time);
+//			
+//			//mergeRecursive
+//			type = "mergeRec";
+//			time = getTime(arr1000s, type);			
+//			System.out.println("numbersSorted1000 mergeRec Time:" + time);
+//			
+//			//selection
+//			type = "selection";
+//			time = getTime(arr1000s, type);			
+//			System.out.println("numbersSorted1000 selection Time:" + time);
+//			
+//			
+//    	  
+//    	   
+//    	  
+//    }
     
     
 
